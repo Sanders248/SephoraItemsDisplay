@@ -1,14 +1,15 @@
 package com.example.sephoraitemsdisplay.features.main
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
-import com.example.sephoraitemsdisplay.R
-import dagger.hilt.android.AndroidEntryPoint
+import android.widget.EditText
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.widget.doAfterTextChanged
 import androidx.recyclerview.widget.RecyclerView
+import com.example.sephoraitemsdisplay.R
 import com.example.sephoraitemsdisplay.features.main.models.MainItem
 import com.example.sephoraitemsdisplay.features.main.ui.MainItemListAdapter
+import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -22,6 +23,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         initListView(findViewById(R.id.recycler_view))
+
+        findViewById<EditText>(R.id.search_edit_text).doAfterTextChanged { editable ->
+            viewModel.onSearchTextChanged(editable?.toString() ?: "")
+        }
 
         viewModel.items.observe(this, ::onItemsReceived)
     }

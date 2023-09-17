@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">SephoraItemsDisplay</string>
+    <string name="search_bar_hint">search</string>
+
     <string name="image_description">Image of the product</string>
     <string name="rating_display">Rating: %.2f ★</string>
     <string name="price_display">Prix: %.2f€</string>
