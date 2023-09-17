@@ -4,10 +4,10 @@ import com.example.sephoraitemsdisplay.domains.models.Item
 import com.example.sephoraitemsdisplay.domains.repositories.ItemsRepository
 import com.example.sephoraitemsdisplay.libraries.network.apiCall
 import com.example.sephoraitemsdisplay.repositories.itemsrepository.apiservices.ItemsApiService
-import com.example.sephoraitemsdisplay.repositories.itemsrepository.apiservices.toItemTable
-import com.example.sephoraitemsdisplay.repositories.itemsrepository.apiservices.toReviewTables
+import com.example.sephoraitemsdisplay.repositories.itemsrepository.apiservices.models.toItemTable
+import com.example.sephoraitemsdisplay.repositories.itemsrepository.apiservices.models.toReviewTables
 import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.ItemProductDao
-import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.toItem
+import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.models.toItem
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject

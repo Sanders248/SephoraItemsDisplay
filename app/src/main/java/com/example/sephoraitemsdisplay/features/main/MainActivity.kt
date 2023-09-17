@@ -6,7 +6,6 @@ import android.widget.TextView
 import com.example.sephoraitemsdisplay.R
 import dagger.hilt.android.AndroidEntryPoint
 import androidx.activity.viewModels
-import androidx.lifecycle.lifecycleScope
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {

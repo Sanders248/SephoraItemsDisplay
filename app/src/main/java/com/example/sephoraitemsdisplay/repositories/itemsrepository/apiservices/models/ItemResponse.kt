@@ -1,4 +1,4 @@
-package com.example.sephoraitemsdisplay.repositories.itemsrepository.apiservices
+package com.example.sephoraitemsdisplay.repositories.itemsrepository.apiservices.models
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

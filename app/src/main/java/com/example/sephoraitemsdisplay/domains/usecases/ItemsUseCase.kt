@@ -11,4 +11,7 @@ class ItemsUseCase @Inject constructor(
     val items: Flow<List<Item>> = repository.items
 
     suspend fun refresh() = repository.refresh()
+
+    fun calculateAverageReviewScore(item: Item): Double? =
+        item.reviews.mapNotNull { it.rating }.average().takeIf { !it.isNaN() }
 }

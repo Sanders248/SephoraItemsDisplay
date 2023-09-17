@@ -1,9 +1,9 @@
-package com.example.sephoraitemsdisplay.repositories.itemsrepository.apiservices
+package com.example.sephoraitemsdisplay.repositories.itemsrepository.apiservices.models
 
-import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.BrandTable
-import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.ImageTable
-import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.ItemTable
-import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.ReviewTable
+import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.models.BrandTable
+import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.models.ImageTable
+import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.models.ItemTable
+import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.models.ReviewTable
 
 fun toItemTable(itemResponse: ItemResponse) = with(itemResponse) {
     ItemTable(

@@ -5,6 +5,9 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Transaction
+import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.models.ItemTable
+import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.models.ItemWithReviews
+import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.models.ReviewTable
 import kotlinx.coroutines.flow.Flow
 
 @Dao

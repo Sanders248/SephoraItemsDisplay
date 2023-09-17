@@ -1,4 +1,4 @@
-package com.example.sephoraitemsdisplay.repositories.itemsrepository.localService
+package com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.models
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

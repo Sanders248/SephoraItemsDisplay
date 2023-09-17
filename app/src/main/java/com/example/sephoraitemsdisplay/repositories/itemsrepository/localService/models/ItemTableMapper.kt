@@ -1,4 +1,4 @@
-package com.example.sephoraitemsdisplay.repositories.itemsrepository.localService
+package com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.models
 
 import com.example.sephoraitemsdisplay.domains.models.Brand
 import com.example.sephoraitemsdisplay.domains.models.Image
