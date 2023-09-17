@@ -33,6 +33,6 @@ class NetworkModule {
         .build()
 
     private companion object {
-        const val BASE_URL = "https://raw.githubusercontent.com/bankin-engineering/challenge-android/master/"
+        const val BASE_URL = "https://sephoraandroid.github.io/testProject/"
     }
 }
