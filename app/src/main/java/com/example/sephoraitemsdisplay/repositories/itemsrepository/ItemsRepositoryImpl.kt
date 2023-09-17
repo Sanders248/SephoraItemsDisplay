@@ -1,6 +1,7 @@
 package com.example.sephoraitemsdisplay.repositories.itemsrepository
 
 import com.example.sephoraitemsdisplay.domains.models.Item
+import com.example.sephoraitemsdisplay.domains.models.Review
 import com.example.sephoraitemsdisplay.domains.repositories.ItemsRepository
 import com.example.sephoraitemsdisplay.libraries.network.apiCall
 import com.example.sephoraitemsdisplay.repositories.itemsrepository.apiservices.ItemsApiService
@@ -19,9 +20,12 @@ class ItemsRepositoryImpl @Inject constructor(
 ): ItemsRepository {
 
     @OptIn(ExperimentalCoroutinesApi::class)
-    override val items: Flow<List<Item>> = itemDao.getUsersWithPlaylists().mapLatest {
+    override val items: Flow<List<Item>> = itemDao.getItemsWithReviews().mapLatest {
         it.map(::toItem)
     }
+
+    override fun getReviews(productId: Int): Flow<List<Review>> =
+        itemDao.getReviewsFromItem(productId)
 
     override suspend fun refresh(): Result<Unit> {
         val itemsTable = apiCall {

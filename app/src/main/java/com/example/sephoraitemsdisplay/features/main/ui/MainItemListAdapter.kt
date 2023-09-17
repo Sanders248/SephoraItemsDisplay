@@ -6,10 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.sephoraitemsdisplay.R
 import com.example.sephoraitemsdisplay.features.main.models.MainItem
+import com.example.sephoraitemsdisplay.features.reviews.ReviewsActivity
 
 class MainItemListAdapter(
     private val context: Context,
@@ -45,6 +47,11 @@ class MainItemListAdapter(
             view.findViewById<TextView>(R.id.description).text = item.description
             view.findViewById<TextView>(R.id.rating).text = getRating(item.averageReviewScore)
             view.findViewById<TextView>(R.id.price).text = getPrice(item.price)
+
+            view.findViewById<ConstraintLayout>(R.id.container).setOnClickListener {
+                val newIntent = ReviewsActivity.newIntent(context, item.productId)
+                context.startActivity(newIntent)
+            }
         }
 
         private fun getRating(rating: Double?): String = rating?.let {

@@ -5,4 +5,8 @@
     <string name="image_description">Image of the product</string>
     <string name="rating_display">Rating: %.2f ★</string>
     <string name="price_display">Prix: %.2f€</string>
+
+    <string name="rating_display_small">%.2f ★</string>
+    <string name="switch_order_description">Switch reviews order</string>
+    <string name="missing_data">Unknown</string>
 </resources>
