@@ -48,11 +48,11 @@ class MainItemListAdapter(
         }
 
         private fun getRating(rating: Double?): String = rating?.let {
-            context.getString(R.string.rating_display, it.toString())
+            context.getString(R.string.rating_display, it)
         } ?: ""
 
         private fun getPrice(price: Float?): String = price?.let {
-            context.getString(R.string.price_display, it.toString())
+            context.getString(R.string.price_display, it)
         } ?: ""
 
     }

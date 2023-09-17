@@ -8,15 +8,18 @@ import com.example.sephoraitemsdisplay.repositories.itemsrepository.apiservices.
 import com.example.sephoraitemsdisplay.repositories.itemsrepository.apiservices.models.toReviewTables
 import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.ItemProductDao
 import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.models.toItem
-import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.mapLatest
 import javax.inject.Inject
 
 class ItemsRepositoryImpl @Inject constructor(
     private val apiService: ItemsApiService,
     private val itemDao: ItemProductDao
 ): ItemsRepository {
-    override val items: Flow<List<Item>> = itemDao.getUsersWithPlaylists().map {
+
+    @OptIn(ExperimentalCoroutinesApi::class)
+    override val items: Flow<List<Item>> = itemDao.getUsersWithPlaylists().mapLatest {
         it.map(::toItem)
     }
 

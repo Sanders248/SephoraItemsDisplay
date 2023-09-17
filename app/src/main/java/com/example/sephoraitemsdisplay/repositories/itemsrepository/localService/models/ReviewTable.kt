@@ -19,5 +19,5 @@ data class ReviewTable (
 ) {
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "review_id")
-    var reviewId: Int = -1
+    var reviewId: Int = 0
 }

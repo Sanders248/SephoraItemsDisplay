@@ -27,6 +27,7 @@ class MainViewModel @Inject constructor(
     init {
         viewModelScope.launch {
             itemsUseCase.refresh()
+            // todo display toast if failed
         }
     }
 }
