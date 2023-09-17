@@ -27,12 +27,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun onItemsReceived(items: List<MainItem>) {
-        viewAdapter.items = items
-        viewAdapter.notifyDataSetChanged()
+        viewAdapter.updateItems(items)
     }
 
     private fun initListView(recyclerView: RecyclerView) {
-        viewAdapter = MainItemListAdapter(emptyList())
+        viewAdapter = MainItemListAdapter(this)
         recyclerView.setHasFixedSize(true)
         recyclerView.adapter = viewAdapter
     }
