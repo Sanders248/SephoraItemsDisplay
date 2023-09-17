@@ -15,7 +15,7 @@ data class ItemTable(
     @ColumnInfo(name = "description")
     val description: String? = null,
     @ColumnInfo(name = "price")
-    val price: Int? = null,
+    val price: Float? = null,
     @ColumnInfo(name = "is_productSet")
     val isProductSet: Boolean? = null,
     @ColumnInfo(name = "is_special_brand")

@@ -8,17 +8,17 @@ data class ReviewResponse(
     @SerialName("product_id")
     val productId: Int,
     @SerialName("hide")
-    val hide: Boolean?,
+    val hide: Boolean? = null,
     @SerialName("reviews")
-    val reviews: List<ItemReviewResponse>
+    val reviews: List<ItemReviewResponse>? = null
 )
 
 @Serializable
 data class ItemReviewResponse(
     @SerialName("name")
-    val name: String?,
+    val name: String? = null,
     @SerialName("text")
-    val text: String?,
+    val text: String? = null,
     @SerialName("rating")
-    val rating: Float?
+    val rating: Float? = null
 )

@@ -4,7 +4,7 @@ data class Item(
     val productId: Int,
     val productName: String?,
     val description: String?,
-    val price: Int?,
+    val price: Float?,
     val image: Image?,
     val brand: Brand?,
     val reviews: List<Review>

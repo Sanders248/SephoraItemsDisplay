@@ -12,7 +12,7 @@ data class ItemResponse(
     @SerialName("description")
     val description: String?,
     @SerialName("price")
-    val price: Int?,
+    val price: Float?,
     @SerialName("images_url")
     val image: ImageResponse?,
     @SerialName("c_brand")

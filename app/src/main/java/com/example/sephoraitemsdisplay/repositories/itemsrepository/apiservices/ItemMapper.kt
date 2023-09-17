@@ -23,7 +23,7 @@ fun ImageResponse.toImageTable() = ImageTable(small = small, large = large)
 fun BrandResponse.toBrandTable() = BrandTable(id = id, name = name)
 
 fun toReviewTables(reviewResponse: ReviewResponse): List<ReviewTable> = with(reviewResponse) {
-    reviews.map {
+    reviews?.map {
         ReviewTable(
             productId = productId,
             hide = hide,
@@ -31,5 +31,5 @@ fun toReviewTables(reviewResponse: ReviewResponse): List<ReviewTable> = with(rev
             text = it.text,
             rating = it.rating
         )
-    }
+    } ?: emptyList()
 }
