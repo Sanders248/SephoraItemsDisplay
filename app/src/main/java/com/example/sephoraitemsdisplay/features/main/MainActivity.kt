@@ -2,11 +2,13 @@ package com.example.sephoraitemsdisplay.features.main
 
 import android.os.Bundle
 import android.widget.EditText
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doAfterTextChanged
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sephoraitemsdisplay.R
+import com.example.sephoraitemsdisplay.features.main.models.MainEvent
 import com.example.sephoraitemsdisplay.features.main.models.MainItem
 import com.example.sephoraitemsdisplay.features.main.ui.MainItemListAdapter
 import dagger.hilt.android.AndroidEntryPoint
@@ -29,10 +31,18 @@ class MainActivity : AppCompatActivity() {
         }
 
         viewModel.items.observe(this, ::onItemsReceived)
+        viewModel.event.observe(this, ::onEventReceived)
     }
 
     private fun onItemsReceived(items: List<MainItem>) {
         viewAdapter.updateItems(items)
+    }
+
+    private fun onEventReceived(event: MainEvent) {
+        when(event) {
+            MainEvent.Idle -> Unit
+            MainEvent.DisplayError -> Toast.makeText(this, getString(R.string.error_message), Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun initListView(recyclerView: RecyclerView) {

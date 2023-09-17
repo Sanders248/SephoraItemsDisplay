@@ -1,6 +1,7 @@
 package com.example.sephoraitemsdisplay.features.main
 
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.sephoraitemsdisplay.domains.usecases.ItemsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -8,6 +9,8 @@ import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.asLiveData
 import com.example.sephoraitemsdisplay.features.main.models.MainItem
 import com.example.sephoraitemsdisplay.features.main.models.toMainItem
+import com.example.sephoraitemsdisplay.features.main.models.MainEvent
+import com.example.sephoraitemsdisplay.libraries.utils.SingleLiveEvent
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.map
@@ -30,10 +33,15 @@ class MainViewModel @Inject constructor(
         items.filter { it.productName?.toLowerCase()?.contains(searchText.toLowerCase()) == true }
     }.asLiveData()
 
+    private val _event: MutableLiveData<MainEvent> = SingleLiveEvent()
+    val event: LiveData<MainEvent> get() = _event
+
     init {
         viewModelScope.launch {
-            //itemsUseCase.refresh()
-            // todo display toast if failed
+            itemsUseCase.refresh()
+                .onFailure {
+                    _event.value = MainEvent.DisplayError
+                }
         }
     }
 
