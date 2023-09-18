@@ -1,8 +1,9 @@
 package com.example.sephoraitemsdisplay.domains.usecases
 
-import com.example.sephoraitemsdisplay.domains.models.Item
-import com.example.sephoraitemsdisplay.domains.models.Review
-import com.example.sephoraitemsdisplay.domains.repositories.ItemsRepository
+import com.example.sephoraitemsdisplay.domains.items.models.Item
+import com.example.sephoraitemsdisplay.domains.items.models.Review
+import com.example.sephoraitemsdisplay.domains.items.repositories.ItemsRepository
+import com.example.sephoraitemsdisplay.domains.items.usecases.ItemsUseCase
 import com.example.sephoraitemsdisplay.getNextItem
 import com.example.sephoraitemsdisplay.getNextReview
 import io.mockk.coVerify

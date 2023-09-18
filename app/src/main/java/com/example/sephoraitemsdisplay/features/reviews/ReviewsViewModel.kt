@@ -5,8 +5,8 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
-import com.example.sephoraitemsdisplay.domains.models.Review
-import com.example.sephoraitemsdisplay.domains.usecases.ItemsUseCase
+import com.example.sephoraitemsdisplay.domains.items.models.Review
+import com.example.sephoraitemsdisplay.domains.items.usecases.ItemsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.combine

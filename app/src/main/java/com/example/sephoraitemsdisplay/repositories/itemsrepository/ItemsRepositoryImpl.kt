@@ -1,8 +1,8 @@
 package com.example.sephoraitemsdisplay.repositories.itemsrepository
 
-import com.example.sephoraitemsdisplay.domains.models.Item
-import com.example.sephoraitemsdisplay.domains.models.Review
-import com.example.sephoraitemsdisplay.domains.repositories.ItemsRepository
+import com.example.sephoraitemsdisplay.domains.items.models.Item
+import com.example.sephoraitemsdisplay.domains.items.models.Review
+import com.example.sephoraitemsdisplay.domains.items.repositories.ItemsRepository
 import com.example.sephoraitemsdisplay.libraries.network.apiCall
 import com.example.sephoraitemsdisplay.repositories.itemsrepository.apiservices.ItemsApiService
 import com.example.sephoraitemsdisplay.repositories.itemsrepository.apiservices.models.toItemTable

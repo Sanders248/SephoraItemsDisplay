@@ -1,4 +1,4 @@
-package com.example.sephoraitemsdisplay.domains.models
+package com.example.sephoraitemsdisplay.domains.items.models
 
 data class Item(
     val productId: Int,

@@ -1,9 +1,9 @@
 package com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.models
 
-import com.example.sephoraitemsdisplay.domains.models.Brand
-import com.example.sephoraitemsdisplay.domains.models.Image
-import com.example.sephoraitemsdisplay.domains.models.Item
-import com.example.sephoraitemsdisplay.domains.models.Review
+import com.example.sephoraitemsdisplay.domains.items.models.Brand
+import com.example.sephoraitemsdisplay.domains.items.models.Image
+import com.example.sephoraitemsdisplay.domains.items.models.Item
+import com.example.sephoraitemsdisplay.domains.items.models.Review
 
 
 fun toItem(itemWithReviews: ItemWithReviews): Item = with(itemWithReviews) {

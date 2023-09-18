@@ -1,8 +1,8 @@
-package com.example.sephoraitemsdisplay.domains.usecases
+package com.example.sephoraitemsdisplay.domains.items.usecases
 
-import com.example.sephoraitemsdisplay.domains.models.Item
-import com.example.sephoraitemsdisplay.domains.models.Review
-import com.example.sephoraitemsdisplay.domains.repositories.ItemsRepository
+import com.example.sephoraitemsdisplay.domains.items.models.Item
+import com.example.sephoraitemsdisplay.domains.items.models.Review
+import com.example.sephoraitemsdisplay.domains.items.repositories.ItemsRepository
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 

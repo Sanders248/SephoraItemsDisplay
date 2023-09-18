@@ -2,7 +2,7 @@ package com.example.sephoraitemsdisplay.repositories.itemsrepository.injection
 
 import android.content.Context
 import androidx.room.Room
-import com.example.sephoraitemsdisplay.domains.repositories.ItemsRepository
+import com.example.sephoraitemsdisplay.domains.items.repositories.ItemsRepository
 import com.example.sephoraitemsdisplay.repositories.itemsrepository.ItemsRepositoryImpl
 import com.example.sephoraitemsdisplay.repositories.itemsrepository.apiservices.ItemsApiService
 import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.ItemsRoomDatabase

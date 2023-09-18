@@ -1,9 +1,9 @@
 package com.example.sephoraitemsdisplay
 
-import com.example.sephoraitemsdisplay.domains.models.Brand
-import com.example.sephoraitemsdisplay.domains.models.Image
-import com.example.sephoraitemsdisplay.domains.models.Item
-import com.example.sephoraitemsdisplay.domains.models.Review
+import com.example.sephoraitemsdisplay.domains.items.models.Brand
+import com.example.sephoraitemsdisplay.domains.items.models.Image
+import com.example.sephoraitemsdisplay.domains.items.models.Item
+import com.example.sephoraitemsdisplay.domains.items.models.Review
 import com.example.sephoraitemsdisplay.repositories.itemsrepository.apiservices.models.BrandResponse
 import com.example.sephoraitemsdisplay.repositories.itemsrepository.apiservices.models.ImageResponse
 import com.example.sephoraitemsdisplay.repositories.itemsrepository.apiservices.models.ItemResponse

@@ -8,7 +8,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sephoraitemsdisplay.R
-import com.example.sephoraitemsdisplay.domains.models.Review
+import com.example.sephoraitemsdisplay.domains.items.models.Review
 import com.example.sephoraitemsdisplay.features.reviews.ui.ReviewsItemListAdapter
 import dagger.hilt.android.AndroidEntryPoint
 

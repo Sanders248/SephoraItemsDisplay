@@ -1,6 +1,6 @@
 package com.example.sephoraitemsdisplay.repositories.itemsrepository
 
-import com.example.sephoraitemsdisplay.domains.models.Review
+import com.example.sephoraitemsdisplay.domains.items.models.Review
 import com.example.sephoraitemsdisplay.getNextItemResponse
 import com.example.sephoraitemsdisplay.getNextItemWithReviews
 import com.example.sephoraitemsdisplay.getNextReview

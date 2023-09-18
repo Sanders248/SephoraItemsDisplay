@@ -3,7 +3,7 @@ package com.example.sephoraitemsdisplay.features.main
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.sephoraitemsdisplay.domains.usecases.ItemsUseCase
+import com.example.sephoraitemsdisplay.domains.items.usecases.ItemsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.asLiveData

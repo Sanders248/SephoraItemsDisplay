@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sephoraitemsdisplay.R
-import com.example.sephoraitemsdisplay.domains.models.Review
+import com.example.sephoraitemsdisplay.domains.items.models.Review
 
 class ReviewsItemListAdapter(
     private val context: Context,
