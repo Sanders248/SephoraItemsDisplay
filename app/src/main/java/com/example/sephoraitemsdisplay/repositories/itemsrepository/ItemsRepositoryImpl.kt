@@ -44,8 +44,8 @@ class ItemsRepositoryImpl @Inject constructor(
             it.flatMap(::toReviewTables)
         }
 
-        itemDao.insertItems(itemsTable.getOrNull() ?: emptyList())
-        itemDao.insertReviews(reviewsTable.getOrNull() ?: emptyList())
+        itemDao.insertItems(itemsTable.getOrThrow())
+        itemDao.insertReviews(reviewsTable.getOrThrow())
 
         return Result.success(Unit)
     }
