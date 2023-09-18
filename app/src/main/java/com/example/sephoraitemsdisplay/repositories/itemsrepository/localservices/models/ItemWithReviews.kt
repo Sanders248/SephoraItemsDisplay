@@ -1,4 +1,4 @@
-package com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.models
+package com.example.sephoraitemsdisplay.repositories.itemsrepository.localservices.models
 
 import androidx.room.Embedded
 import androidx.room.Relation

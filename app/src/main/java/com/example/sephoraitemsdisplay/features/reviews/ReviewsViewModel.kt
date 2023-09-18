@@ -24,8 +24,8 @@ class ReviewsViewModel @Inject constructor(
     private val isDescOrder = MutableStateFlow(true)
 
     val reviews: LiveData<List<Review>> =
-        itemsUseCase.getReviewsFromItem(productId).combine(isDescOrder) { reviews, isAscOrder ->
-            if (isAscOrder) reviews else reviews.asReversed()
+        itemsUseCase.getReviewsFromItem(productId).combine(isDescOrder) { reviews, isDescOrder ->
+            if (isDescOrder) reviews else reviews.asReversed()
         }.asLiveData()
 
     fun onReverseOrderClicked() {

@@ -1,4 +1,4 @@
-package com.example.sephoraitemsdisplay.repositories.itemsrepository.localService
+package com.example.sephoraitemsdisplay.repositories.itemsrepository.localservices
 
 import androidx.room.Dao
 import androidx.room.Insert
@@ -6,9 +6,9 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Transaction
 import com.example.sephoraitemsdisplay.domains.items.models.Review
-import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.models.ItemTable
-import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.models.ItemWithReviews
-import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.models.ReviewTable
+import com.example.sephoraitemsdisplay.repositories.itemsrepository.localservices.models.ItemTable
+import com.example.sephoraitemsdisplay.repositories.itemsrepository.localservices.models.ItemWithReviews
+import com.example.sephoraitemsdisplay.repositories.itemsrepository.localservices.models.ReviewTable
 import kotlinx.coroutines.flow.Flow
 
 @Dao

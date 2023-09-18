@@ -6,11 +6,11 @@ import com.example.sephoraitemsdisplay.getNextItemWithReviews
 import com.example.sephoraitemsdisplay.getNextReview
 import com.example.sephoraitemsdisplay.getNextReviewResponse
 import com.example.sephoraitemsdisplay.repositories.itemsrepository.apiservices.ItemsApiService
-import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.ItemProductDao
-import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.models.ItemTable
-import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.models.ItemWithReviews
-import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.models.ReviewTable
-import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.models.toItem
+import com.example.sephoraitemsdisplay.repositories.itemsrepository.localservices.ItemProductDao
+import com.example.sephoraitemsdisplay.repositories.itemsrepository.localservices.models.ItemTable
+import com.example.sephoraitemsdisplay.repositories.itemsrepository.localservices.models.ItemWithReviews
+import com.example.sephoraitemsdisplay.repositories.itemsrepository.localservices.models.ReviewTable
+import com.example.sephoraitemsdisplay.repositories.itemsrepository.localservices.models.toItem
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.mockk

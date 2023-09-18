@@ -5,7 +5,7 @@ import androidx.room.Room
 import com.example.sephoraitemsdisplay.domains.items.repositories.ItemsRepository
 import com.example.sephoraitemsdisplay.repositories.itemsrepository.ItemsRepositoryImpl
 import com.example.sephoraitemsdisplay.repositories.itemsrepository.apiservices.ItemsApiService
-import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.ItemsRoomDatabase
+import com.example.sephoraitemsdisplay.repositories.itemsrepository.localservices.ItemsRoomDatabase
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
@@ -22,12 +22,12 @@ interface ItemsRepositoryModule {
 
     companion object {
         @Provides
-        fun provideCharacterApiService(
+        fun provideItemApiService(
             retrofit: Retrofit
         ): ItemsApiService = retrofit.create(ItemsApiService::class.java)
 
         @Provides
-        fun provideCharacterDatabase(
+        fun provideItemsRoomDatabase(
             @ApplicationContext context: Context
         ) = Room.databaseBuilder(
             context,
@@ -36,6 +36,6 @@ interface ItemsRepositoryModule {
         ).build()
 
         @Provides
-        fun provideItemsProductDao(db: ItemsRoomDatabase) = db.itemProductDao()
+        fun provideItemProductDao(db: ItemsRoomDatabase) = db.itemProductDao()
     }
 }

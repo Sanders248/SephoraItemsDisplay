@@ -8,9 +8,7 @@ import com.example.sephoraitemsdisplay.getNextItem
 import com.example.sephoraitemsdisplay.getNextReview
 import io.mockk.coVerify
 import io.mockk.spyk
-import io.mockk.verify
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.test.runTest
 import org.junit.Test

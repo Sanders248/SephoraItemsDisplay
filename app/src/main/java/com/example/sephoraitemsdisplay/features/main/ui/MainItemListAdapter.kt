@@ -33,9 +33,7 @@ class MainItemListAdapter(
         holder.bindItem(item)
     }
 
-    override fun getItemCount(): Int {
-        return items.size
-    }
+    override fun getItemCount(): Int = items.size
 
     inner class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         fun bindItem(item: MainItem) {
@@ -61,6 +59,5 @@ class MainItemListAdapter(
         private fun getPrice(price: Float?): String = price?.let {
             context.getString(R.string.price_display, it)
         } ?: ""
-
     }
 }

@@ -9,11 +9,11 @@ import com.example.sephoraitemsdisplay.repositories.itemsrepository.apiservices.
 import com.example.sephoraitemsdisplay.repositories.itemsrepository.apiservices.models.ItemResponse
 import com.example.sephoraitemsdisplay.repositories.itemsrepository.apiservices.models.ItemReviewResponse
 import com.example.sephoraitemsdisplay.repositories.itemsrepository.apiservices.models.ReviewResponse
-import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.models.BrandTable
-import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.models.ImageTable
-import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.models.ItemTable
-import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.models.ItemWithReviews
-import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.models.ReviewTable
+import com.example.sephoraitemsdisplay.repositories.itemsrepository.localservices.models.BrandTable
+import com.example.sephoraitemsdisplay.repositories.itemsrepository.localservices.models.ImageTable
+import com.example.sephoraitemsdisplay.repositories.itemsrepository.localservices.models.ItemTable
+import com.example.sephoraitemsdisplay.repositories.itemsrepository.localservices.models.ItemWithReviews
+import com.example.sephoraitemsdisplay.repositories.itemsrepository.localservices.models.ReviewTable
 import kotlin.random.Random
 
 fun getNextItem(

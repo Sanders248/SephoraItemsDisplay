@@ -7,8 +7,8 @@ import com.example.sephoraitemsdisplay.libraries.network.apiCall
 import com.example.sephoraitemsdisplay.repositories.itemsrepository.apiservices.ItemsApiService
 import com.example.sephoraitemsdisplay.repositories.itemsrepository.apiservices.models.toItemTable
 import com.example.sephoraitemsdisplay.repositories.itemsrepository.apiservices.models.toReviewTables
-import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.ItemProductDao
-import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.models.toItem
+import com.example.sephoraitemsdisplay.repositories.itemsrepository.localservices.ItemProductDao
+import com.example.sephoraitemsdisplay.repositories.itemsrepository.localservices.models.toItem
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.mapLatest
