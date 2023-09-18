@@ -1,5 +1,8 @@
-package com.example.sephoraitemsdisplay.repositories
+package com.example.sephoraitemsdisplay
 
+import com.example.sephoraitemsdisplay.domains.models.Brand
+import com.example.sephoraitemsdisplay.domains.models.Image
+import com.example.sephoraitemsdisplay.domains.models.Item
 import com.example.sephoraitemsdisplay.domains.models.Review
 import com.example.sephoraitemsdisplay.repositories.itemsrepository.apiservices.models.BrandResponse
 import com.example.sephoraitemsdisplay.repositories.itemsrepository.apiservices.models.ImageResponse
@@ -13,6 +16,35 @@ import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService
 import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.models.ReviewTable
 import kotlin.random.Random
 
+fun getNextItem(
+    productId: Int = Random.nextInt(),
+    productName: String = Random.nextString(),
+    description: String = Random.nextString(),
+    price: Float = Random.nextFloat(),
+    image: Image = getNextImage(),
+    brand: Brand = getNextBrand(),
+    reviews: List<Review> = List(Random.nextInt(1, 8)) { getNextReview() }
+) = Item(
+    productId = productId,
+    productName = productName,
+    description = description,
+    price = price,
+    image = image,
+    brand = brand,
+    reviews = reviews
+)
+
+fun getNextImage() = Image(small = Random.nextString(), large = null)
+fun getNextBrand() = Brand(id = Random.nextString(), name = Random.nextString())
+fun getNextReview(
+    name: String? = Random.nextString(),
+    text: String? = Random.nextString(),
+    rating: Float? = Random.nextDouble(0.0, 10.0).toFloat()
+) = Review(
+    name = name,
+    text = text,
+    rating = rating
+)
 
 fun getNextItemWithReviews() = ItemWithReviews(
     item = ItemTable(
@@ -24,7 +56,8 @@ fun getNextItemWithReviews() = ItemWithReviews(
         isSpecialBrand = Random.nextBoolean(),
         image = getNextImageTable(),
         brand = getNextBrandTable()
-    ), reviews = List(Random.nextInt(1, 8)) { getNextReviewTable() }
+    ),
+    reviews = List(Random.nextInt(1, 8)) { getNextReviewTable() }
 )
 
 fun getNextImageTable() = ImageTable(small = Random.nextString(), large = null)
@@ -68,12 +101,6 @@ fun getNextReviewResponse() = ReviewResponse(
 )
 
 fun getNextItemReviewResponse() = ItemReviewResponse(
-    name = Random.nextString(),
-    text = Random.nextString(),
-    rating = Random.nextDouble(0.0, 10.0).toFloat()
-)
-
-fun getNextReview() = Review(
     name = Random.nextString(),
     text = Random.nextString(),
     rating = Random.nextDouble(0.0, 10.0).toFloat()

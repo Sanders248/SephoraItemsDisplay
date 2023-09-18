@@ -1,10 +1,10 @@
 package com.example.sephoraitemsdisplay.repositories.itemsrepository
 
 import com.example.sephoraitemsdisplay.domains.models.Review
-import com.example.sephoraitemsdisplay.repositories.getNextItemResponse
-import com.example.sephoraitemsdisplay.repositories.getNextItemWithReviews
-import com.example.sephoraitemsdisplay.repositories.getNextReview
-import com.example.sephoraitemsdisplay.repositories.getNextReviewResponse
+import com.example.sephoraitemsdisplay.getNextItemResponse
+import com.example.sephoraitemsdisplay.getNextItemWithReviews
+import com.example.sephoraitemsdisplay.getNextReview
+import com.example.sephoraitemsdisplay.getNextReviewResponse
 import com.example.sephoraitemsdisplay.repositories.itemsrepository.apiservices.ItemsApiService
 import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.ItemProductDao
 import com.example.sephoraitemsdisplay.repositories.itemsrepository.localService.models.ItemTable
@@ -71,10 +71,10 @@ class ItemsRepositoryTest {
         val itemsRepository = getItemsRepository(apiService = apiService)
 
         // When
-        val response = itemsRepository.refresh()
+        val result = itemsRepository.refresh()
 
         // Then
-        assertTrue(response.isFailure)
+        assertTrue(result.isFailure)
     }
 
     @Test
@@ -87,10 +87,10 @@ class ItemsRepositoryTest {
         val itemsRepository = getItemsRepository(apiService = apiService)
 
         // When
-        val response = itemsRepository.refresh()
+        val result = itemsRepository.refresh()
 
         // Then
-        assertTrue(response.isFailure)
+        assertTrue(result.isFailure)
     }
 
     @Test
@@ -104,12 +104,12 @@ class ItemsRepositoryTest {
         val itemsRepository = getItemsRepository(apiService = apiService, itemDao = itemDao)
 
         // When
-        val response = itemsRepository.refresh()
+        val result = itemsRepository.refresh()
 
         // Then
         coVerify { itemDao.insertItems(any()) }
         coVerify { itemDao.insertReviews(any()) }
-        assertTrue(response.isSuccess)
+        assertTrue(result.isSuccess)
     }
 
     // endregion
